@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poetry Guide</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1 class="title">Welcome to Poetry Guide</h1>
+
+  <h2>🔍 Search Authors</h2>
+  <section class="author-search">
+      <form action="/search-authors" method="POST">
+    <label>Author (optional):</label>
+    <input type="text" name="author"><br>
+    <label>Title (optional):</label>
+    <input type="text" name="title"><br>
+    <button type="submit">Search Authors</button>
+  </form>
+  </section>
+
+  <hr>
+
+  <h2>📖 Search Poems</h2>
+  <section class="poem-search">
+      <form action="/search-poems" method="POST">
+    <label>Author (optional):</label>
+    <input type="text" name="author"><br>
+    <label>Title (optional):</label>
+    <input type="text" name="title"><br>
+    <label>Lines contain (optional):</label>
+    <input type="text" name="lines"><br>
+    <button type="submit">Search Poems</button>
+  </form>
+  </section>
+
+</body>
+</html>
