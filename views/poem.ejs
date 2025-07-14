@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= poem.title %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h2><%= poem.title %></h2>
+  <h3>by <%= poem.author %></h3>
+  <pre><%= poem.lines.join('\n') %></pre>
+  <a href="/">⬅ Back to search</a>
+</body>
+</html>
