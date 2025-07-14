@@ -58,6 +58,14 @@ router.post('/search-poems', async (req, res) => {
     const response = await axios.get(url);
     const poems = response.data;
 
+    if (!Array.isArray(poems)) {
+      // PoetryDB returned an error object, not an array
+      return res.render('results', {
+        poems: [],
+        error: poems.error || 'No poems found or API error.'
+      });
+    }
+
     res.render('results', { poems, error: null });
   } catch (error) {
     res.render('results', {
